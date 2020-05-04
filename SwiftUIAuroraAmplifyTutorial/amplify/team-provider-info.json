@@ -1,0 +1,25 @@
+{
+    "default": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-swiftuiauroraamplify-default-213919-authRole",
+            "UnauthRoleArn": "arn:aws:iam::930445983506:role/amplify-swiftuiauroraamplify-default-213919-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::930445983506:role/amplify-swiftuiauroraamplify-default-213919-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-swiftuiauroraamplify-default-213919-deployment",
+            "UnauthRoleName": "amplify-swiftuiauroraamplify-default-213919-unauthRole",
+            "StackName": "amplify-swiftuiauroraamplify-default-213919",
+            "StackId": "arn:aws:cloudformation:us-east-1:930445983506:stack/amplify-swiftuiauroraamplify-default-213919/ac08a1a0-8e0c-11ea-97f0-12878b97cc21",
+            "AmplifyAppId": "d3one3nj01t0cc"
+        },
+        "categories": {
+            "api": {
+                "swiftuiauroraamplify": {
+                    "rdsRegion": "us-east-1",
+                    "rdsClusterIdentifier": "arn:aws:rds:us-east-1:930445983506:cluster:database-aurora-amplify",
+                    "rdsSecretStoreArn": "arn:aws:secretsmanager:us-east-1:930445983506:secret:rds-db-credentials/cluster-GBJJT3OVDJKPMBS24O4GNPQNLY/admin-PvvpE9",
+                    "rdsDatabaseName": "BLOGDB"
+                }
+            }
+        }
+    }
+}

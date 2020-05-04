@@ -1,0 +1,79 @@
+# this is an auto generated file. This will be overwritten
+mutation DeleteBlog($blogId: String!) {
+  deleteBlog(blogId: $blogId) {
+    blogId
+    blogName
+    createdAt
+    blogAuthorId
+  }
+}
+mutation CreateBlog($createBlogInput: CreateBlogInput!) {
+  createBlog(createBlogInput: $createBlogInput) {
+    blogId
+    blogName
+    createdAt
+    blogAuthorId
+  }
+}
+mutation UpdateBlog($updateBlogInput: UpdateBlogInput!) {
+  updateBlog(updateBlogInput: $updateBlogInput) {
+    blogId
+    blogName
+    createdAt
+    blogAuthorId
+  }
+}
+mutation DeletePost($postId: String!) {
+  deletePost(postId: $postId) {
+    postId
+    postTitle
+    postContent
+    blogId
+  }
+}
+mutation CreatePost($createPostInput: CreatePostInput!) {
+  createPost(createPostInput: $createPostInput) {
+    postId
+    postTitle
+    postContent
+    blogId
+  }
+}
+mutation UpdatePost($updatePostInput: UpdatePostInput!) {
+  updatePost(updatePostInput: $updatePostInput) {
+    postId
+    postTitle
+    postContent
+    blogId
+  }
+}
+mutation DeleteUser($userId: String!) {
+  deleteUser(userId: $userId) {
+    userId
+    name
+    email
+    picture
+    createdAt
+    lastLoginAt
+  }
+}
+mutation CreateUser($createUserInput: CreateUserInput!) {
+  createUser(createUserInput: $createUserInput) {
+    userId
+    name
+    email
+    picture
+    createdAt
+    lastLoginAt
+  }
+}
+mutation UpdateUser($updateUserInput: UpdateUserInput!) {
+  updateUser(updateUserInput: $updateUserInput) {
+    userId
+    name
+    email
+    picture
+    createdAt
+    lastLoginAt
+  }
+}

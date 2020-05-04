@@ -9,9 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: Properties
+    @EnvironmentObject var dataStore: AWSAppSyncProvider
+    
+    // MARK: Body
     var body: some View {
         Text("Hello, World!")
     }
+    
+    // MARK: Methods
 }
 
 struct ContentView_Previews: PreviewProvider {

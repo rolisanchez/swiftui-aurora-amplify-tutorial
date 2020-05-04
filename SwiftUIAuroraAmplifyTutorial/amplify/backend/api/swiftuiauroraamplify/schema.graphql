@@ -1,0 +1,101 @@
+input CreateBlogInput {
+  blogId: String!
+  blogName: String!
+  createdAt: String!
+  blogAuthorId: String!
+}
+
+type Blog {
+  blogId: String!
+  blogName: String!
+  createdAt: String!
+  blogAuthorId: String!
+}
+
+input UpdateBlogInput {
+  blogId: String!
+  blogName: String
+  createdAt: String
+  blogAuthorId: String
+}
+
+input CreatePostInput {
+  postId: String!
+  postTitle: String!
+  postContent: String!
+  blogId: String!
+}
+
+type Post {
+  postId: String!
+  postTitle: String!
+  postContent: String!
+  blogId: String!
+}
+
+input UpdatePostInput {
+  postId: String!
+  postTitle: String
+  postContent: String
+  blogId: String
+}
+
+input CreateUserInput {
+  userId: String!
+  name: String!
+  email: String!
+  picture: String!
+  createdAt: String!
+  lastLoginAt: String!
+}
+
+type User {
+  userId: String!
+  name: String!
+  email: String!
+  picture: String!
+  createdAt: String!
+  lastLoginAt: String!
+}
+
+input UpdateUserInput {
+  userId: String!
+  name: String
+  email: String
+  picture: String
+  createdAt: String
+  lastLoginAt: String
+}
+
+type Mutation {
+  deleteBlog(blogId: String!): Blog
+  createBlog(createBlogInput: CreateBlogInput!): Blog
+  updateBlog(updateBlogInput: UpdateBlogInput!): Blog
+  deletePost(postId: String!): Post
+  createPost(createPostInput: CreatePostInput!): Post
+  updatePost(updatePostInput: UpdatePostInput!): Post
+  deleteUser(userId: String!): User
+  createUser(createUserInput: CreateUserInput!): User
+  updateUser(updateUserInput: UpdateUserInput!): User
+}
+
+type Query {
+  getBlog(blogId: String!): Blog
+  listBlogs: [Blog]
+  getPost(postId: String!): Post
+  listPosts: [Post]
+  getUser(userId: String!): User
+  listUsers: [User]
+}
+
+type Subscription {
+  onCreateBlog: Blog @aws_subscribe(mutations: ["createBlog"])
+  onCreatePost: Post @aws_subscribe(mutations: ["createPost"])
+  onCreateUser: User @aws_subscribe(mutations: ["createUser"])
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}

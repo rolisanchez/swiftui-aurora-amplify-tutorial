@@ -1,0 +1,53 @@
+# this is an auto generated file. This will be overwritten
+query GetBlog($blogId: String!) {
+  getBlog(blogId: $blogId) {
+    blogId
+    blogName
+    createdAt
+    blogAuthorId
+  }
+}
+query ListBlogs {
+  listBlogs {
+    blogId
+    blogName
+    createdAt
+    blogAuthorId
+  }
+}
+query GetPost($postId: String!) {
+  getPost(postId: $postId) {
+    postId
+    postTitle
+    postContent
+    blogId
+  }
+}
+query ListPosts {
+  listPosts {
+    postId
+    postTitle
+    postContent
+    blogId
+  }
+}
+query GetUser($userId: String!) {
+  getUser(userId: $userId) {
+    userId
+    name
+    email
+    picture
+    createdAt
+    lastLoginAt
+  }
+}
+query ListUsers {
+  listUsers {
+    userId
+    name
+    email
+    picture
+    createdAt
+    lastLoginAt
+  }
+}

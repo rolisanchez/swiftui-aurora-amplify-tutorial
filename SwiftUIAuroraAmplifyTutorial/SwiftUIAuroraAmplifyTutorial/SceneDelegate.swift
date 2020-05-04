@@ -19,9 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
+        // Create DataStore to be Shared:
+        let datastore = AWSAppSyncProvider()
+        
+//        datastore.addUser(create: thisUser(name: "Tony Stark", email: "stark@gmail.com", picture: "no_picture", createdAt: "1588606785", lastLoginAt: "1588606785"))
+        
+        print("datastore.users ", datastore.users)
         // Create the SwiftUI view that provides the window contents.
+        
         let contentView = ContentView()
-
+            .environmentObject(datastore)
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)

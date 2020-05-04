@@ -1,0 +1,9 @@
+#set( $output = $utils.rds.toJsonObject($ctx.result) )
+#if( $output.length() < 2 )
+  $util.error("Invalid response from RDS DataSource. See info for the full response.", "InvalidResponse", {}, $output)
+#end
+#set( $output = $output[1] )
+#if( $output.isEmpty() )
+  #return
+#end
+$utils.toJson($output[0])

@@ -3,19 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49C9E0E5DE6C4540BF508510 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AFCA5E7B8354C6D85FE830E /* awsconfiguration.json */; };
+		8DAD09660CA8C9AB9D0E905B /* Pods_SwiftUIAuroraAmplifyTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA9E5D29E84C28D305A401 /* Pods_SwiftUIAuroraAmplifyTutorial.framework */; };
 		DB264D3E245C122E008F2358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D3D245C122E008F2358 /* AppDelegate.swift */; };
 		DB264D40245C122E008F2358 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D3F245C122E008F2358 /* SceneDelegate.swift */; };
 		DB264D42245C122E008F2358 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D41245C122E008F2358 /* ContentView.swift */; };
 		DB264D44245C122E008F2358 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB264D43245C122E008F2358 /* Assets.xcassets */; };
 		DB264D47245C122E008F2358 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB264D46245C122E008F2358 /* Preview Assets.xcassets */; };
 		DB264D4A245C122E008F2358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB264D48245C122E008F2358 /* LaunchScreen.storyboard */; };
+		DB3F85E1246061AB00C23D89 /* AWSAppSyncProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F85E0246061AB00C23D89 /* AWSAppSyncProvider.swift */; };
+		DB3F85E32460622100C23D89 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3F85E22460622100C23D89 /* Models.swift */; };
+		DB8F03B124605F6A004CDFA6 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB8F03B024605F6A004CDFA6 /* amplifyconfiguration.json */; };
+		DB8F03B324605F73004CDFA6 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB8F03B224605F73004CDFA6 /* awsconfiguration.json */; };
+		DB8F03B524605F77004CDFA6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F03B424605F77004CDFA6 /* API.swift */; };
+		F68BCF5D8252492CA5EA3811 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B89D95912A394EF4AD4EA1F2 /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1AFCA5E7B8354C6D85FE830E /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = awsconfiguration.json; path = ./awsconfiguration.json; sourceTree = "<group>"; };
+		44C942BDA3B4406EAB14E9B0 /* amplify */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = amplify; path = ./amplify; sourceTree = "<group>"; };
+		A80CCAB22A17D9C30D7AB82E /* Pods-SwiftUIAuroraAmplifyTutorial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIAuroraAmplifyTutorial.release.xcconfig"; path = "Target Support Files/Pods-SwiftUIAuroraAmplifyTutorial/Pods-SwiftUIAuroraAmplifyTutorial.release.xcconfig"; sourceTree = "<group>"; };
+		B1DA9E5D29E84C28D305A401 /* Pods_SwiftUIAuroraAmplifyTutorial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftUIAuroraAmplifyTutorial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B89D95912A394EF4AD4EA1F2 /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = amplifyconfiguration.json; path = ./amplifyconfiguration.json; sourceTree = "<group>"; };
+		D49F212BAF5A7C5EDF2A17FC /* Pods-SwiftUIAuroraAmplifyTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftUIAuroraAmplifyTutorial.debug.xcconfig"; path = "Target Support Files/Pods-SwiftUIAuroraAmplifyTutorial/Pods-SwiftUIAuroraAmplifyTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		DB264D3A245C122D008F2358 /* SwiftUIAuroraAmplifyTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIAuroraAmplifyTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB264D3D245C122E008F2358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB264D3F245C122E008F2358 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +38,12 @@
 		DB264D46245C122E008F2358 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB264D49245C122E008F2358 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB264D4B245C122E008F2358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB3F85E0246061AB00C23D89 /* AWSAppSyncProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSAppSyncProvider.swift; sourceTree = "<group>"; };
+		DB3F85E22460622100C23D89 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		DB8F03B024605F6A004CDFA6 /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		DB8F03B224605F73004CDFA6 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		DB8F03B424605F77004CDFA6 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
+		E88B8EE6F8A249E6A2644A44 /* amplifyxc.config */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = amplifyxc.config; path = ./amplifyxc.config; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DAD09660CA8C9AB9D0E905B /* Pods_SwiftUIAuroraAmplifyTutorial.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C71405CE82F0BD8C19EA98E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1DA9E5D29E84C28D305A401 /* Pods_SwiftUIAuroraAmplifyTutorial.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABA78D28038CE6E4E44037AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D49F212BAF5A7C5EDF2A17FC /* Pods-SwiftUIAuroraAmplifyTutorial.debug.xcconfig */,
+				A80CCAB22A17D9C30D7AB82E /* Pods-SwiftUIAuroraAmplifyTutorial.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DB264D31245C122D008F2358 = {
 			isa = PBXGroup;
 			children = (
 				DB264D3C245C122E008F2358 /* SwiftUIAuroraAmplifyTutorial */,
 				DB264D3B245C122D008F2358 /* Products */,
+				ABA78D28038CE6E4E44037AC /* Pods */,
+				9C71405CE82F0BD8C19EA98E /* Frameworks */,
+				E88B8EE6F8A249E6A2644A44 /* amplifyxc.config */,
+				1AFCA5E7B8354C6D85FE830E /* awsconfiguration.json */,
+				B89D95912A394EF4AD4EA1F2 /* amplifyconfiguration.json */,
+				44C942BDA3B4406EAB14E9B0 /* amplify */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +106,9 @@
 				DB264D43245C122E008F2358 /* Assets.xcassets */,
 				DB264D48245C122E008F2358 /* LaunchScreen.storyboard */,
 				DB264D4B245C122E008F2358 /* Info.plist */,
+				DB3F85E0246061AB00C23D89 /* AWSAppSyncProvider.swift */,
+				DB3F85E22460622100C23D89 /* Models.swift */,
+				DB8F03AF24605F4A004CDFA6 /* AWS */,
 				DB264D45245C122E008F2358 /* Preview Content */,
 			);
 			path = SwiftUIAuroraAmplifyTutorial;
@@ -75,6 +122,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DB8F03AF24605F4A004CDFA6 /* AWS */ = {
+			isa = PBXGroup;
+			children = (
+				DB8F03B024605F6A004CDFA6 /* amplifyconfiguration.json */,
+				DB8F03B224605F73004CDFA6 /* awsconfiguration.json */,
+				DB8F03B424605F77004CDFA6 /* API.swift */,
+			);
+			path = AWS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB264D4E245C122E008F2358 /* Build configuration list for PBXNativeTarget "SwiftUIAuroraAmplifyTutorial" */;
 			buildPhases = (
+				98C8609D99727FB0334F4351 /* [CP] Check Pods Manifest.lock */,
 				DB264D36245C122D008F2358 /* Sources */,
 				DB264D37245C122D008F2358 /* Frameworks */,
 				DB264D38245C122D008F2358 /* Resources */,
+				A07ECC0B5116DBEC02B12725 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +193,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB264D4A245C122E008F2358 /* LaunchScreen.storyboard in Resources */,
+				DB8F03B324605F73004CDFA6 /* awsconfiguration.json in Resources */,
+				DB8F03B124605F6A004CDFA6 /* amplifyconfiguration.json in Resources */,
 				DB264D47245C122E008F2358 /* Preview Assets.xcassets in Resources */,
 				DB264D44245C122E008F2358 /* Assets.xcassets in Resources */,
+				49C9E0E5DE6C4540BF508510 /* awsconfiguration.json in Resources */,
+				F68BCF5D8252492CA5EA3811 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		98C8609D99727FB0334F4351 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwiftUIAuroraAmplifyTutorial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A07ECC0B5116DBEC02B12725 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIAuroraAmplifyTutorial/Pods-SwiftUIAuroraAmplifyTutorial-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SwiftUIAuroraAmplifyTutorial/Pods-SwiftUIAuroraAmplifyTutorial-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SwiftUIAuroraAmplifyTutorial/Pods-SwiftUIAuroraAmplifyTutorial-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DB264D36245C122D008F2358 /* Sources */ = {
@@ -148,6 +253,9 @@
 			files = (
 				DB264D3E245C122E008F2358 /* AppDelegate.swift in Sources */,
 				DB264D40245C122E008F2358 /* SceneDelegate.swift in Sources */,
+				DB8F03B524605F77004CDFA6 /* API.swift in Sources */,
+				DB3F85E32460622100C23D89 /* Models.swift in Sources */,
+				DB3F85E1246061AB00C23D89 /* AWSAppSyncProvider.swift in Sources */,
 				DB264D42245C122E008F2358 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +390,7 @@
 		};
 		DB264D4F245C122E008F2358 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D49F212BAF5A7C5EDF2A17FC /* Pods-SwiftUIAuroraAmplifyTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +411,7 @@
 		};
 		DB264D50245C122E008F2358 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A80CCAB22A17D9C30D7AB82E /* Pods-SwiftUIAuroraAmplifyTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
