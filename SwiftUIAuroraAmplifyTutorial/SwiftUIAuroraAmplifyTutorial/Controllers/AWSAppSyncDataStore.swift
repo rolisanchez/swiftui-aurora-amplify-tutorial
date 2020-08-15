@@ -1,5 +1,5 @@
 //
-//  AWSAppSyncProvider.swift
+//  AWSAppSyncDataStore.swift
 //  SwiftUIAuroraAmplifyTutorial
 //
 //  Created by Victor Rolando Sanchez Jara on 5/4/20.
@@ -8,26 +8,25 @@
 
 import Combine
 import AWSAppSync
-//import Amplify
 
-class AWSAppSyncProvider: ObservableObject {
+class AWSAppSyncDataStore: ObservableObject {
     
     let objectWillChange = ObservableObjectPublisher()
     
-    var users: [thisUser] {
+    var users: [ThisUser] {
         didSet {
             objectWillChange.send()
         }
         
     }
     
-    var blogs: [thisBlog] {
+    var blogs: [ThisBlog] {
         didSet {
             objectWillChange.send()
         }
     }
     
-    var posts: [thisPost] {
+    var posts: [ThisPost] {
         didSet {
             objectWillChange.send()
         }
@@ -66,12 +65,12 @@ class AWSAppSyncProvider: ObservableObject {
                 print("users \(resultUsers)")
                 
                 let listUsers = resultUsers as! [ListUsersQuery.Data.ListUser]
-                self.users = listUsers.map { thisUser(listUser: $0) }
+                self.users = listUsers.map { ThisUser(listUser: $0) }
             }
         }
     }
     
-    func addUser(create user: thisUser) {
+    func addUser(create user: ThisUser, completionHandler: @escaping (ThisUser?) -> Void) {
         let createUserMutation = CreateUserMutation(createUserInput: user.createUserInput())
         
         appSyncClient?.perform(mutation: createUserMutation, optimisticUpdate: { readWriteTransaction in
@@ -80,21 +79,26 @@ class AWSAppSyncProvider: ObservableObject {
             if let error = error as? AWSAppSyncClientError {
                 print("Error occurred: \(error)")
                 print("Error occurred (localized): \(error.localizedDescription )")
+                completionHandler(nil)
                 return
             }
             if let resultError = result?.errors {
                 print("Error saving user: \(resultError)")
                 self.fetchUsers()
+                completionHandler(nil)
                 return
             }
             print("result \(result)")
             print("(result) type \(type(of: result))")
             
             if let resultData = result?.data, let createdUser = resultData.createUser {
-                self.users.append(thisUser(createUser: createdUser))
                 print("User created: \(String(describing: createdUser.userId))")
+                let newUser = ThisUser(createUser: createdUser)
+                self.users.append(newUser)
+                completionHandler(newUser)
             } else {
                 self.fetchUsers()
+                completionHandler(nil)
             }
         })
     }
@@ -113,12 +117,12 @@ class AWSAppSyncProvider: ObservableObject {
                 print("blogs \(resultBlogs)")
                 
                 let listBlogs = resultBlogs as! [ListBlogsQuery.Data.ListBlog]
-                self.blogs = listBlogs.map { thisBlog(listBlog: $0) }
+                self.blogs = listBlogs.map { ThisBlog(listBlog: $0) }
             }
         }
     }
     
-    func addBlog(create blog: thisBlog) {
+    func addBlog(create blog: ThisBlog) {
         let createBlogMutation = CreateBlogMutation(createBlogInput: blog.createBlogInput())
 
         appSyncClient?.perform(mutation: createBlogMutation, optimisticUpdate: { readWriteTransaction in
@@ -138,7 +142,7 @@ class AWSAppSyncProvider: ObservableObject {
             print("(result) type \(type(of: result))")
             
             if let resultData = result?.data, let createdBlog = resultData.createBlog {
-                self.blogs.append(thisBlog(createBlog: createdBlog))
+                self.blogs.append(ThisBlog(createBlog: createdBlog))
                 print("Blog created: \(String(describing: createdBlog.blogId))")
             } else {
                 self.fetchBlogs()
@@ -160,12 +164,12 @@ class AWSAppSyncProvider: ObservableObject {
                 print("posts \(resultPosts)")
                 
                 let listPosts = resultPosts as! [ListPostsQuery.Data.ListPost]
-                self.posts = listPosts.map { thisPost(listPost: $0) }
+                self.posts = listPosts.map { ThisPost(listPost: $0) }
             }
         }
     }
     
-    func addPost(create post: thisPost) {
+    func addPost(create post: ThisPost) {
         let createPostMutation = CreatePostMutation(createPostInput: post.createPostInput())
         
         appSyncClient?.perform(mutation: createPostMutation, optimisticUpdate: { readWriteTransaction in
@@ -185,7 +189,7 @@ class AWSAppSyncProvider: ObservableObject {
             print("(result) type \(type(of: result))")
             
             if let resultData = result?.data, let createdPost = resultData.createPost {
-                self.posts.append(thisPost(createPost: createdPost))
+                self.posts.append(ThisPost(createPost: createdPost))
                 print("Post created: \(String(describing: createdPost.postId))")
             } else {
                 self.fetchPosts()

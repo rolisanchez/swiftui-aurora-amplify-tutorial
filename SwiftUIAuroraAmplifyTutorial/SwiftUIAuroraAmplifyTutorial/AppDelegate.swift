@@ -8,9 +8,6 @@
 
 import UIKit
 import AWSAppSync
-//import Amplify
-//import AWSMobileClient
-//import AmplifyPlugins
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -45,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appSyncClient = nil
         }
     }
+    
     // MARK: Getting documents directory from File Manager
     func getDocumentsDirectory() -> URL {
         // find all possible documents directories for this user

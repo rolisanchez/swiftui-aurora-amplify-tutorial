@@ -13,6 +13,6 @@ target 'SwiftUIAuroraAmplifyTutorial' do
   pod 'AWSMobileClient', '~> 2.12.1'      # Required dependency
   pod 'amplify-tools'
   pod 'Amplify'
-  pod 'AWSPluginsCore'
-  pod 'AmplifyPlugins/AWSAPIPlugin'
+  # pod 'AWSPluginsCore'
+  # pod 'AmplifyPlugins/AWSAPIPlugin'
 end
