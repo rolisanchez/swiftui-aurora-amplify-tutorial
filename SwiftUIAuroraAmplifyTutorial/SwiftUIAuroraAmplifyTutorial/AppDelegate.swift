@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             appSyncClient = try AWSAppSyncClient(appSyncConfig: appSyncConfig)
             
             // Check if we have any queued mutations in the case we were offline
-            print("appSyncClient.queuedMutationCount \(appSyncClient.queuedMutationCount)")
+            print("appSyncClient.queuedMutationCount \(appSyncClient.queuedMutationCount ?? 0)")
             
             
         } catch {

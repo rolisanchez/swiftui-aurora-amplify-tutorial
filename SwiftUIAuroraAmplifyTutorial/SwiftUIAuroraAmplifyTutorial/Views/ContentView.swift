@@ -35,7 +35,6 @@ struct ContentView: View {
             }))
             .sheet(isPresented: $presentingSheet, content: {
                 CreateUserView()
-                    .environmentObject(self.dataStore)
             })
         }
     }

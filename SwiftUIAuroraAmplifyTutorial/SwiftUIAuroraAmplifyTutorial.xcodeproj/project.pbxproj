@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		49C9E0E5DE6C4540BF508510 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 1AFCA5E7B8354C6D85FE830E /* awsconfiguration.json */; };
 		8DAD09660CA8C9AB9D0E905B /* Pods_SwiftUIAuroraAmplifyTutorial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DA9E5D29E84C28D305A401 /* Pods_SwiftUIAuroraAmplifyTutorial.framework */; };
 		DB0A4E49248D3FD10075001C /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0A4E48248D3FD10075001C /* CreateUserView.swift */; };
 		DB264D3E245C122E008F2358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB264D3D245C122E008F2358 /* AppDelegate.swift */; };
@@ -23,7 +22,6 @@
 		DB8F03B124605F6A004CDFA6 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB8F03B024605F6A004CDFA6 /* amplifyconfiguration.json */; };
 		DB8F03B324605F73004CDFA6 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = DB8F03B224605F73004CDFA6 /* awsconfiguration.json */; };
 		DB8F03B524605F77004CDFA6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8F03B424605F77004CDFA6 /* API.swift */; };
-		F68BCF5D8252492CA5EA3811 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = B89D95912A394EF4AD4EA1F2 /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,7 +192,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Victor Rolando Sanchez Jara";
 				TargetAttributes = {
 					DB264D39245C122D008F2358 = {
@@ -230,8 +228,6 @@
 				DB8F03B124605F6A004CDFA6 /* amplifyconfiguration.json in Resources */,
 				DB264D47245C122E008F2358 /* Preview Assets.xcassets in Resources */,
 				DB264D44245C122E008F2358 /* Assets.xcassets in Resources */,
-				49C9E0E5DE6C4540BF508510 /* awsconfiguration.json in Resources */,
-				F68BCF5D8252492CA5EA3811 /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +332,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -396,6 +393,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

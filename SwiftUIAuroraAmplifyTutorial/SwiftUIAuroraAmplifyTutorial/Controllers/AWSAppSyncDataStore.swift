@@ -15,20 +15,25 @@ class AWSAppSyncDataStore: ObservableObject {
     
     var users: [ThisUser] {
         didSet {
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
-        
     }
     
     var blogs: [ThisBlog] {
         didSet {
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
     
     var posts: [ThisPost] {
         didSet {
-            objectWillChange.send()
+            DispatchQueue.main.async {
+                self.objectWillChange.send()
+            }
         }
     }
     
@@ -74,6 +79,8 @@ class AWSAppSyncDataStore: ObservableObject {
         let createUserMutation = CreateUserMutation(createUserInput: user.createUserInput())
         
         appSyncClient?.perform(mutation: createUserMutation, optimisticUpdate: { readWriteTransaction in
+            print("Optimistic update")
+            // Optimistically consider the operation won't fail, so add into our users array
             self.users.append(user)
         },  resultHandler: { (result, error) in
             if let error = error as? AWSAppSyncClientError {
@@ -94,7 +101,16 @@ class AWSAppSyncDataStore: ObservableObject {
             if let resultData = result?.data, let createdUser = resultData.createUser {
                 print("User created: \(String(describing: createdUser.userId))")
                 let newUser = ThisUser(createUser: createdUser)
-                self.users.append(newUser)
+                
+                // Only add new user if it wasn't added by optimistic update
+                if !self.users.contains(where: { (user) -> Bool in
+                    user.userId == newUser.userId
+                }) {
+                    self.users.append(newUser)
+                }
+                    
+                
+                
                 completionHandler(newUser)
             } else {
                 self.fetchUsers()
